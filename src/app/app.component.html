@@ -1,0 +1,23 @@
+<hello name="{{ name }}"></hello>
+<p>
+  Start editing to see some magic happen :)
+</p>
+<input #codigo class="form-control" placeholder="codigo"> 
+<input #nombre class="form-control" placeholder="nombre">
+<input #tipo class="form-control" placeholder="tipo">
+<input #longitud class="form-control" placeholder="longitud">
+<input #latitud class="form-control" placeholder="latitud">
+
+<button  type="button"
+         class="btn btn-primary"
+         (click)="add(nombre.value,codigo.value,tipo.value,latitud.value,longitud.value)">Create
+ </button>
+
+<h1 *ngIf="vinedo != null">Numero Pokemones:{{vinedo.vinedos}}
+  <div >
+  <h3 *ngFor="let vinedo of vinedo.vinedos" >
+     {{vinedo.nombre}}
+  </h3>
+ 
+</div>
+</h1>
